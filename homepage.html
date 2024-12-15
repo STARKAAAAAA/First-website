@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Noto+Sans+SC:wght@900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=ZCOOL+XiaoWei&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            /* background-color: red; */
+        }
+
+        .nav {
+            display: flex;
+            background-color: rgb(0, 0, 0);
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            
+        }
+
+
+        .nav .bar {
+
+            color: white;
+            margin: 0 20px;
+            font-size: 17px;
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            transition: all 0.4s ease;
+        }
+
+        .nav .bar:hover {
+            transform: scale(1.1);
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                         0 0 20px rgba(255, 255, 255, 0.5),
+                         0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .nav a {
+            display: flex;
+            justify-content: start;
+        }
+
+        .nav img {
+            width: 8%;
+            margin: 10px 0;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .nav .bar {
+                font-size: 15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav .bar {
+                font-size: 13px;
+            }
+
+            .nav img {
+                width: 12%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .nav .bar {
+                font-size: 11px;
+                margin: 0 5px;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-around;
+            margin-top: 120px;
+        }
+
+        .left {
+
+            /* height: 836px; */
+            /* width: 500px; */
+            /* background-color: green; */
+            flex: 1;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .left h2 {
+            font-size: 35px;
+            margin-left: 10px;
+        }
+
+        .left h4 {
+            font-size: 20px;
+            color: rgb(187, 187, 187);
+            font-weight: 500;
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .left a {
+            /* text-align: center; */
+            background-color: black;
+            height: 40px;
+            width: 70px;
+            border-radius: 13px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            box-shadow: rgba(128, 128, 128, 0.15) 0px 0.7px 0.7px -0.6px,
+                rgba(128, 128, 128, 0.15) 0px 1.8px 1.8px -1.2px,
+                rgba(128, 128, 128, 0.14) 0px 3.6px 3.6px -1.9px,
+                rgba(128, 128, 128, 0.13) 0px 6.9px 6.9px -2.5px,
+                rgba(128, 128, 128, 0.11) 0px 13.6px 13.6px -3.1px,
+                rgba(128, 128, 128, 0.05) 0px 30px 30px -3.8px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            /* height: 836px; */
+            /* width: 500px; */
+            /* background-color: green; */
+            padding: 0;
+        }
+
+        .card img {
+            display: flex;
+            width: 60%;
+            margin: 0;
+            justify-content: center;
+            box-shadow: 0px 0px 10px 5px rgb(215, 215, 215);
+            transform: rotate(5deg);
+            transition: transform 0.3s ease;
+            filter: blur(10px);
+        }
+
+        .card img:hover {
+            transform: rotate(0deg) scale(1.1);
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="homepage.html"><img src="鹰标最终.png"></a>
+        <a href="#" class="bar">Home</a>
+        <a href="#" class="bar">About</a>
+        <a href="#" class="bar">Works</a>
+        <a href="#" class="bar">Contact</a>
+        <a href="#" class="bar" style="margin-right: 20px;">Blog</a>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h2 class="h">Send you a gift</h2>
+            <h4 class="h">Want a Christmas card? Click here...</h4>
+            <a href="page1.html">Click</a>
+        </div>
+        <div class="card"><img src="圣诞节.png" alt="圣诞节" title="圣诞节"></div>
+
+    </div>
+</body>
+
+</html>

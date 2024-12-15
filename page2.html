@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Noto+Sans+SC:wght@900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+VA+Guides&family=Quicksand:wght@300..700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <title>Page2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            /* background-color: black; */
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            /* background-color: pink; */
+        }
+        .name-back {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            margin: 20px 0;
+            flex: 1;
+            width: 120px;
+            
+        }
+        .name {
+            display: flex;
+        }
+        .name h4{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            line-height: 40px;
+            color: black;
+        }
+        .back {
+            display: flex;
+            align-self: center;
+        }
+        .back a{
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            text-decoration: none;
+            background-color: black;
+            height: 40px;
+            width: 70px;
+            border-radius: 13px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            box-shadow: rgba(128, 128, 128, 0.15) 0px 0.7px 0.7px -0.6px,
+                rgba(128, 128, 128, 0.15) 0px 1.8px 1.8px -1.2px,
+                rgba(128, 128, 128, 0.14) 0px 3.6px 3.6px -1.9px,
+                rgba(128, 128, 128, 0.13) 0px 6.9px 6.9px -2.5px,
+                rgba(128, 128, 128, 0.11) 0px 13.6px 13.6px -3.1px,
+                rgba(128, 128, 128, 0.05) 0px 30px 30px -3.8px;
+
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            margin: 500px 0  10px 0 ;
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+        }
+        .main-box {
+            width: 1271px;
+            height: 500px;
+            padding-top: 100px;
+            background-color: rgba(0, 0, 0, 0);
+            background-image: url(圣诞节.png);
+            background-size: contain;
+            backdrop-filter: blur(100px);
+            border-radius: 25px;
+            box-shadow: -10px 10px 40px rgba(0, 255, 0, 0.8), 10px -10px 40px rgba(255, 0, 0, 0.8);
+        }
+        .main-box h1{
+            background: linear-gradient(90deg, #ff0000, #00ff00); 
+            -webkit-background-clip: text; 
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            text-align: center;
+            font-size: 100px;
+        }
+        .main-box h2{
+            background: linear-gradient(90deg, #ff0000, #00ff00); 
+            -webkit-background-clip: text; 
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <audio src="Ludovico Einaudi _ Redi Hasa - Seven Days Walking _ Day 1 - Gravity_01.mp3" autoplay loop></audio>
+    <div class="nav">
+        <div class="name-back">
+            <div class="name">
+                <h4><a href="homepage.html">STARK</a></h4>
+            </div>
+            <div class="back">
+                <a href="homepage.html">Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-box">
+            <h1>Hi!</h1>
+            <h2 id="greeting"></h2>
+            <h1>merry christmas</h1>
+        </div>
+    </div>
+    
+    <span style="text-align: center;">Designed by STARK</span>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const userEmail = urlParams.get('User Email');
+        document.getElementById('greeting').innerText = `${userEmail}`;
+    </script>
+</body>
+</html>

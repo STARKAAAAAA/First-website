@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&family=Noto+Sans+SC:wght@900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+DE+VA+Guides&family=Quicksand:wght@300..700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <title>Page1</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            /* background-color: pink; */
+        }
+        .name-back {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            margin: 20px 0;
+            flex: 1;
+            width: 120px;
+            
+        }
+        .name {
+            display: flex;
+        }
+        .name h4{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            line-height: 40px;
+            color: black;
+        }
+        .back {
+            display: flex;
+            align-self: center;
+        }
+        .back a{
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            text-decoration: none;
+            background-color: black;
+            height: 40px;
+            width: 70px;
+            border-radius: 13px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            box-shadow: rgba(128, 128, 128, 0.15) 0px 0.7px 0.7px -0.6px,
+                rgba(128, 128, 128, 0.15) 0px 1.8px 1.8px -1.2px,
+                rgba(128, 128, 128, 0.14) 0px 3.6px 3.6px -1.9px,
+                rgba(128, 128, 128, 0.13) 0px 6.9px 6.9px -2.5px,
+                rgba(128, 128, 128, 0.11) 0px 13.6px 13.6px -3.1px,
+                rgba(128, 128, 128, 0.05) 0px 30px 30px -3.8px;
+
+        }
+        .container {
+            display: flex;
+            margin-top: 80px;
+            justify-content: center;
+        }
+        img{
+            width: 70%;
+        }
+        .picture-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .picture {
+            /* background-color: red; */
+            flex: 1;
+            margin-left: 150px;
+        }
+        .text {
+            flex-direction: column;
+            margin-left: 5vw;
+            margin-right: 10vw;
+            text-align: center;
+        }
+        .text h2 {
+            font-size: 8vw;
+            background: linear-gradient(90deg, #ff0000, #00ff00); 
+            -webkit-background-clip: text; 
+            background-clip: text;
+            -webkit-text-fill-color: transparent; 
+        }
+        .text h4 {
+            font-size: 2vw;
+            color: rgb(174, 174, 174);
+            margin-bottom: 10px;
+        }
+        #email {
+            margin-left: 5px;
+            padding-left: 10px;
+            width: 20vw;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #d8d8d8;
+            border: none;
+            outline: none;
+            color: rgb(174, 174, 174);
+        }
+        #send {
+            background-color: black;
+            margin: 10px auto;
+            border: none;
+            outline: none;
+            height: 40px;
+            width: 5vw;
+            min-width: 60px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            box-shadow: rgba(128, 128, 128, 0.15) 0px 0.7px 0.7px -0.6px,
+                rgba(128, 128, 128, 0.15) 0px 1.8px 1.8px -1.2px,
+                rgba(128, 128, 128, 0.14) 0px 3.6px 3.6px -1.9px,
+                rgba(128, 128, 128, 0.13) 0px 6.9px 6.9px -2.5px,
+                rgba(128, 128, 128, 0.11) 0px 13.6px 13.6px -3.1px,
+                rgba(128, 128, 128, 0.05) 0px 30px 30px -3.8px;
+
+        }
+        @media screen and (max-width: 768px) {
+            .picture {
+                margin-left: 100px;
+                min-width: 250px;
+            }
+            
+            img {
+                min-width: 230px;
+            }
+            .text {
+                margin: 20px auto;
+                width: 100%;
+                text-align: center;
+            }
+            
+            #email {
+                width: 50vw;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @keyframes scaleRotateSpring {
+            0% {
+                transform: scale(0.9) rotate(-0.01deg);
+                opacity: 0;
+            }
+            70% {
+                transform: scale(1.01) rotate(0.005deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+
+
+
+
+        .text {
+            animation: scaleRotateSpring 0.4s ease-out 0.1s;
+        }
+
+        /* text 中子元素的动画 */
+        .text h2 {
+            animation: scaleRotateSpring 0.4s ease-out 0.15s;
+        }
+
+        .text h4 {
+            animation: scaleRotateSpring 0.4s ease-out 0.2s;
+        }
+
+        .text form {
+            animation: scaleRotateSpring 0.4s ease-out 0.25s;
+        }
+
+
+        .picture-text, .picture, .text, 
+        .text h2, .text h4, .text form {
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes scaleRotatePicture {
+            0% {
+                transform: scale(0.3) rotate(-10deg);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05) rotate(5deg);
+                opacity: 0.8;
+            }
+            80% {
+                transform: scale(0.98) rotate(-2deg);
+                opacity: 0.9;
+            }
+            100% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+        
+        
+        .picture {
+            animation: scaleRotatePicture 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.05s;
+        }
+        span {
+            display: flex;
+            justify-content: center;
+            margin: 500px 0  10px 0 ;
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="name-back">
+            <div class="name">
+                <h4><a href="homepage.html">STARK</a></h4>
+            </div>
+            <div class="back">
+                <a href="homepage.html">Back</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="picture-text">
+            <div class="picture">
+                <img src="圣诞节.png" alt="圣诞节" title="圣诞节">
+            </div>
+            <div class="text">
+                <h2>Email</h2>
+                <h4>Tell me who you are</h4>
+                <form action="page2.html" method="get">
+                    <input type="text" id="email" name="User Email" placeholder="Email address">
+                    <button type="submit" id="send">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <span style="text-align: center;">Designed by STARK</span>
+</body>
+</html>
